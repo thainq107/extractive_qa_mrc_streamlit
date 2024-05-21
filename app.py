@@ -2,7 +2,7 @@ import os
 import torch
 import gdown
 import streamlit as st
-from transformers import AutoTokenizer, AutoTokenizer
+from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 
 def load_model(gdrive_id='10IOylWbThT3M-pC6eunjh_Z0dc_VfQ-V'):
 
@@ -11,7 +11,7 @@ def load_model(gdrive_id='10IOylWbThT3M-pC6eunjh_Z0dc_VfQ-V'):
     # download folder
     gdown.download_folder(id=gdrive_id)
   tokenizer = AutoTokenizer.from_pretrained(model_path)
-  model = AutoTokenizer.from_pretrained(model_path)
+  model = AutoModelForQuestionAnswering.from_pretrained(model_path)
   return tokenizer, model
 
 tokenizer, model = load_model()
