@@ -26,7 +26,7 @@ def inference(question, context, tokenizer, model):
 
 def main():
   st.title('Extractive Question Answering - Machine Reading Comprehension')
-  st.title('Model: XLM-RoBERTa-Base. Dataset: SQUAD-V2)
+  st.title('Model: XLM-RoBERTa-Base. Dataset: SQUAD-V2')
   context = st.text_input("Context: ", "Hà Nội là thủ đô của nước Cộng hòa Xã hội chủ nghĩa Việt Nam. Hà Nội nằm về phía tây bắc của trung tâm vùng đồng bằng châu thổ sông Hồng, với địa hình bao gồm vùng đồng bằng trung tâm và vùng đồi núi ở phía bắc và phía tây thành phố."
   question = st.text_input("Question: ", "Thủ đô của nước Việt Nam là gì?")
   result = inference(question, context, tokenizer, model)
