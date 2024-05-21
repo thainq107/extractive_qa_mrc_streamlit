@@ -4,6 +4,7 @@ import gdown
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForQuestionAnswering
 
+@st.cache_resource
 def load_model(gdrive_id='10IOylWbThT3M-pC6eunjh_Z0dc_VfQ-V'):
 
   model_path = 'xlm-roberta-base-squad2'
